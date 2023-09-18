@@ -1,10 +1,15 @@
-import logo from './logo.svg';
+import Tours from './components/Tours';
 import './App.css';
+import data from './data'
+import React, { useState } from 'react';
 
 function App() {
+
+  const [tours, setTours] = useState(data)
   return (
-    <div className='text-bold bg-[#0874f6] text-center'>
-    Hello world
+    <div>
+    <h2>Plan with Abhishek</h2>
+    <Tours tours={tours}></Tours>
     </div>
   );
 }
